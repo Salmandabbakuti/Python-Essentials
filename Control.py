@@ -1,10 +1,4 @@
 import RPi.GPIO as GPIO
-import os
-
-# Read data from Raspberry Pi (specifically read GPU temperature)
-temp = os.popen("/opt/vc/bin/vcgencmd measure_temp").read()
-print("GPU temperature is {}".format(temp[5:]))
-
 # GPIO setup
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -22,4 +16,4 @@ try:
             print("LED is off")
 except KeyboardInterrupt:
     GPIO.cleanup()
-    print("")
+    print("Control Terminated")
