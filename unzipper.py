@@ -5,4 +5,4 @@ for zip_file in sys.argv[1:]:
     pzf=PyZipFile(zip_file)
     pzf.extractall()
 #Salman Dabbakuti
-#run "py unzip.py <zip file you wanted to unZip>"
+#run "py unzipper.py <zip file you wanted to unZip>"
