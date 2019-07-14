@@ -1,7 +1,7 @@
-import math
+import mathModule
 
-math.add(2,5)
-math.sub(2,5)
-math.mul(2,5)
-math.div(2,5)
-math.exp(2,5)
+mathModule.add(2,5)
+mathModule.sub(2,5)
+mathModule.mul(2,5)
+mathModule.div(2,5)
+mathModule.exp(2,5)
