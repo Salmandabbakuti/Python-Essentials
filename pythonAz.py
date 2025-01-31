@@ -37,3 +37,37 @@ for x in fruits:
     print(x)
     if x == "Mango":
         break
+
+# List Comprehension
+names = ["Alice", "Bob", "Amanda", "Charlie", "Angela"]
+a_names = [name for name in names if name.startswith("A")]
+print(a_names)  # Output: ['Alice', 'Amanda', 'Angela']
+
+# Classes and Objects
+class Car:
+    def __init__(self, brand, model, year):  # Constructor (initializer)
+        self.brand = brand  # Instance variable
+        self.model = model
+        self.year = year
+
+    def display_info(self):  # Method
+        return f"{self.year} {self.brand} {self.model}"
+
+# Creating an object (instance) of the Car class
+car1 = Car("Tesla", "Model S", 2023)
+
+print(car1.display_info())  # Output: 2023 Tesla Model S
+
+# Inheritance
+class ElectricCar(Car):  # ElectricCar class inherits from Car class
+    def __init__(self, brand, model, year, autonomy):
+        super().__init__(brand, model, year)  # Call the parent class constructor
+        self.autonomy = autonomy
+
+    def display_info(self):  # Overriding the display_info method
+        return f"{super().display_info()} with autonomy of {self.autonomy} km"
+
+# Creating an object of the ElectricCar class
+car2 = ElectricCar("Tesla", "Model 3", 2022, 500)
+
+print(car2.display_info())  # Output: 2022 Tesla Model 3 with autonomy of 500 km
